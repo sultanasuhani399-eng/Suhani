@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swiggy Knows. — Campaign Pitch 2025</title>
+<meta name="description" content="An AI-powered behavioral mirror campaign for Swiggy India. Bold, culturally sharp, Cannes-worthy.">
+<meta property="og:title" content="Swiggy Knows. — Campaign Pitch">
+<meta property="og:description" content="India's first AI emotional-order mirror. A campaign so sharp it makes users say: How does Swiggy know this about me?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FC4404;
+    --orange-dark: #c93300;
+    --orange-light: #ff6b35;
+    --black: #0a0a0a;
+    --white: #fafaf7;
+    --gray: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-light: #888;
+    --gray-pale: #f0efea;
+    --border: rgba(255,255,255,0.08);
+    --border-light: rgba(0,0,0,0.08);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ───── NOISE TEXTURE ───── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* ───── HERO ───── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(252,68,4,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(252,68,4,0.15);
+    border: 1px solid rgba(252,68,4,0.3);
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 2.5rem;
+  }
+
+  .badge-dot {
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(64px, 12vw, 140px);
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title .line-1 { display: block; color: var(--white); }
+  .hero-title .line-2 { display: block; color: var(--orange); }
+  .hero-title .line-3 { display: block; color: rgba(255,255,255,0.2); font-style: italic; font-size: 0.55em; letter-spacing: -0.01em; margin-top: 0.2em; }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .hero-stat { }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--orange);
+  }
+  .hero-stat-label {
+    font-size: 12px;
+    color: var(--gray-light);
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+  }
+
+  .hero-desc {
+    max-width: 560px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ───── NAV ───── */
+  .toc {
+    background: rgba(252,68,4,0.06);
+    border-bottom: 1px solid var(--border);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+  }
+  .toc-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .toc-inner::-webkit-scrollbar { display: none; }
+  .toc-brand {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--orange);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .toc-links { display: flex; gap: 1.5rem; align-items: center; }
+  .toc-link {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gray-light);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+  .toc-link:hover { color: var(--orange); }
+
+  /* ───── SECTIONS ───── */
+  section {
+    padding: 6rem 2rem;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 40px;
+    background: var(--orange);
+    opacity: 0.4;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em {
+    color: var(--orange);
+    font-style: normal;
+  }
+
+  .body-text {
+    font-size: 17px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.8;
+    max-width: 720px;
+  }
+
+  /* ───── TRUTH BLOCK ───── */
+  .truth-block {
+    background: rgba(252,68,4,0.06);
+    border: 1px solid rgba(252,68,4,0.2);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 16px 16px 0;
+    padding: 2.5rem;
+    margin: 3rem 0;
+  }
+
+  .truth-quote {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.45;
+  }
+
+  .truth-attr {
+    margin-top: 1.5rem;
+    font-size: 14px;
+    color: rgba(255,255,255,0.4);
+    font-style: italic;
+  }
+
+  /* ───── CARDS ───── */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 2.5rem;
+  }
+
+  .card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .card:hover {
+    border-color: rgba(252,68,4,0.3);
+    transform: translateY(-4px);
+  }
+
+  .card-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--orange);
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .card-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+  }
+
+  /* ───── AI MECHANISM ───── */
+  .ai-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    margin-top: 3rem;
+  }
+
+  .ai-step {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .ai-step-num {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .ai-step-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .ai-step-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+  }
+
+  .ai-arrow {
+    text-align: center;
+    padding: 0 1rem;
+    color: var(--orange);
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  /* ───── NOTIFICATIONS ───── */
+  .notif-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 2.5rem;
+  }
+
+  .notif {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.2s;
+  }
+
+  .notif:hover { border-color: rgba(252,68,4,0.25); }
+
+  .notif-icon {
+    width: 44px; height: 44px;
+    background: var(--orange);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .notif-content { flex: 1; }
+
+  .notif-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .notif-app-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .notif-time {
+    font-size: 12px;
+    color: var(--gray-light);
+  }
+
+  .notif-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+  }
+
+  /* ───── SOCIAL POSTS ───── */
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+    margin-top: 2.5rem;
+  }
+
+  .social-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .social-card:hover { border-color: rgba(252,68,4,0.25); }
+
+  .social-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .avatar {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    font-family: 'Syne', sans-serif;
+  }
+
+  .avatar.ugc {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  }
+
+  .social-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  .social-handle {
+    font-size: 12px;
+    color: var(--gray-light);
+  }
+
+  .social-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+  }
+
+  .social-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .social-stat {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  .social-stat strong {
+    color: var(--orange);
+    font-weight: 500;
+  }
+
+  /* ───── OOH ───── */
+  .ooh-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 2.5rem;
+  }
+
+  .ooh-card {
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ooh-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--orange);
+  }
+
+  .ooh-location {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
+
+  .ooh-copy {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(20px, 3.5vw, 32px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+  }
+
+  .ooh-brand {
+    font-size: 14px;
+    color: var(--orange);
+    font-weight: 500;
+  }
+
+  /* ───── EXECUTION PLAN ───── */
+  .exec-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 2.5rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .exec-item {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .exec-item:last-child { border-bottom: none; }
+
+  .exec-phase {
+    background: rgba(252,68,4,0.08);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    padding: 1.75rem 1.5rem;
+    min-width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+
+  .exec-phase-tag {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 600;
+  }
+
+  .exec-phase-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .exec-body {
+    padding: 1.75rem 2rem;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+  }
+
+  .exec-body strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* ───── METRICS ───── */
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 2.5rem;
+  }
+
+  .metric-card {
+    background: var(--gray);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .metric-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .metric-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.5;
+  }
+
+  /* ───── RISK SECTION ───── */
+  .risk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 2.5rem;
+  }
+
+  .risk-main {
+    grid-column: 1 / -1;
+    background: rgba(252,68,4,0.06);
+    border: 1px solid rgba(252,68,4,0.2);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .risk-main p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+  }
+
+  /* ───── FINAL ARGUMENT ───── */
+  .final-section {
+    background: var(--orange);
+    color: var(--black);
+    border-bottom: none;
+  }
+
+  .final-section .section-label {
+    color: rgba(0,0,0,0.5);
+  }
+
+  .final-section .section-label::after {
+    background: rgba(0,0,0,0.3);
+  }
+
+  .final-section .section-title { color: var(--black); }
+
+  .final-section .body-text {
+    color: rgba(0,0,0,0.7);
+    max-width: 820px;
+    font-size: 18px;
+  }
+
+  .final-box {
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .final-box p {
+    font-size: 16px;
+    color: rgba(0,0,0,0.65);
+    line-height: 1.8;
+  }
+
+  /* ───── FOOTER ───── */
+  footer {
+    padding: 3rem 2rem;
+    background: #050505;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-brand {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--orange);
+  }
+
+  .footer-note {
+    font-size: 13px;
+    color: var(--gray-light);
+  }
+
+  /* ───── DIVIDER ───── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .divider-dot {
+    width: 6px; height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  /* ───── BIG QUOTE ───── */
+  .big-quote {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  .big-quote em {
+    color: var(--orange);
+    font-style: normal;
+  }
+
+  /* ───── TAG CHIPS ───── */
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.5rem;
+  }
+
+  .chip {
+    background: rgba(252,68,4,0.1);
+    border: 1px solid rgba(252,68,4,0.2);
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 14px;
+    border-radius: 100px;
+  }
+
+  /* ───── VIRAL MECHANICS ───── */
+  .viral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 2.5rem;
+  }
+
+  .viral-item {
+    background: var(--gray);
+    padding: 2rem;
+  }
+
+  .viral-icon {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .viral-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  .viral-body {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.65;
+  }
+
+  /* ───── SCROLL ANIMATION ───── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ───── RESPONSIVE ───── */
+  @media (max-width: 768px) {
+    section { padding: 4rem 1.25rem; }
+    .hero { padding: 5rem 1.25rem 3rem; }
+    .ai-flow {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .ai-arrow { transform: rotate(90deg); }
+    .metrics-grid { grid-template-columns: 1fr; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .exec-item { flex-direction: column; }
+    .exec-phase { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); min-width: unset; }
+    .toc-inner { gap: 1.5rem; }
+    .hero-meta { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ░░ HERO ░░ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Cannes Lions Campaign Brief · Swiggy India · 2025
+    </div>
+    <h1 class="hero-title">
+      <span class="line-1">Swiggy</span>
+      <span class="line-2">Knows.</span>
+      <span class="line-3">India's AI Emotional Order Mirror</span>
+    </h1>
+    <p class="hero-desc">An AI-powered campaign built on a sharper truth: you don't just order food. You order feelings. Swiggy makes that truth feel seen, slightly exposed, and impossible not to share.</p>
+    <div class="hero-meta">
+      <div class="hero-stat">
+        <div class="hero-stat-num">100M+</div>
+        <div class="hero-stat-label">Orders powering the AI</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">12</div>
+        <div class="hero-stat-label">Metro cities · OOH launch</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">90</div>
+        <div class="hero-stat-label">Days to pilot launch</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">₹0</div>
+        <div class="hero-stat-label">Paid UGC spend needed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ STICKY NAV ░░ -->
+<nav class="toc">
+  <div class="toc-inner">
+    <div class="toc-brand">Swiggy Knows.</div>
+    <div class="toc-links">
+      <a href="#truth" class="toc-link">The Truth</a>
+      <a href="#idea" class="toc-link">Big Idea</a>
+      <a href="#ai" class="toc-link">AI Engine</a>
+      <a href="#notifications" class="toc-link">Notifications</a>
+      <a href="#social" class="toc-link">Social</a>
+      <a href="#ooh" class="toc-link">OOH</a>
+      <a href="#execution" class="toc-link">Execution</a>
+      <a href="#viral" class="toc-link">Viral</a>
+      <a href="#risk" class="toc-link">Risk</a>
+      <a href="#impact" class="toc-link">Impact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ░░ TRUTH ░░ -->
+<section id="truth">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 01 — The Uncomfortable Human Truth</div>
+    <h2 class="section-title fade-up">The insight that makes <em>everything</em> work</h2>
+    <div class="truth-block fade-up">
+      <div class="truth-quote">"Every Swiggy order is an emotional confession. Biryani at 1 AM isn't hunger. It's loneliness, avoidance, anxiety, or celebration — and the user knows it. They just pretend they don't. You don't just order food. You order feelings."</div>
+      <div class="truth-attr">Swiggy's AI has witnessed 100M+ orders. It knows your emotional state before you do. This campaign makes that terrifyingly visible.</div>
+    </div>
+    <p class="body-text fade-up">Indian Gen Z and Millennials live in a paradox: they overshare online, yet pretend their Swiggy order history is private. They dismiss cravings as random — but the pattern is deeply, embarrassingly predictable. Swiggy's data already knows. This campaign makes Swiggy say it out loud.</p>
+    <div class="chip-row fade-up">
+      <span class="chip">Impulsive ordering</span>
+      <span class="chip">Late-night cravings</span>
+      <span class="chip">Emotional eating</span>
+      <span class="chip">Meme culture</span>
+      <span class="chip">Gen Z India</span>
+      <span class="chip">Hyperlocal behavior</span>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ BIG IDEA ░░ -->
+<section id="idea">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 02 — The Big Idea</div>
+    <h2 class="section-title fade-up">India's first <em>AI emotional</em> order mirror</h2>
+    <div class="big-quote fade-up">
+      "Swiggy already has the most intimate dataset in Indian consumer history. <em>This campaign makes that intimacy visible, emotional, and viral.</em>"
+    </div>
+    <p class="body-text fade-up">Swiggy launches a personalized AI feature called <strong style="color:#FC4404;font-weight:500;">Swiggy Knows.</strong> — a real-time, eerily accurate behavioral portrait of each user built from their order history, time patterns, weather data, and app behavior. But the power move is restraint: the experience is <strong style="color:#FC4404;font-weight:500;">private by default, opt-in by design, and shareable only by choice.</strong> Instead of hiding the intelligence in a recommendation engine, Swiggy surfaces it as sharp, darkly funny, uncomfortably accurate personality verdicts across push notifications, in-app confessions, story cards, and ambient OOH in 12 metro cities.</p>
+    <br>
+    <p class="body-text fade-up">The AI doesn't just recommend food. It reads patterns, names rituals, and predicts emotional behavior with unnerving accuracy. Every Knows Card is a Spotify Wrapped moment — but make it Indian, make it emotional, make it slightly uncomfortable, and release it every week instead of once a year. The result feels less like marketing and more like a mirror users choose to hold up to themselves.</p>
+
+    <div class="card-grid" style="margin-top:3rem;">
+      <div class="card fade-up">
+        <div class="card-num">Feature 01</div>
+        <div class="card-title">The Knows Card</div>
+        <div class="card-body">A weekly Spotify Wrapped-style card: your food personality type, peak craving hour, and most emotionally loaded dish. Shareable in 1 tap. Beautiful enough to post. Accurate enough to terrify.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Feature 02</div>
+        <div class="card-title">Emotional Timeline</div>
+        <div class="card-body">A visual diary of your emotional states mapped to food. Breakup biryanis. Exam Maggis. Celebration pizzas. Your whole year, told through 34-minute delivery slots.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Feature 03</div>
+        <div class="card-title">Food Personality Type</div>
+        <div class="card-body">12 archetypes: "The Midnight Avoider," "The Comfort Ritualist," "The Binge-Canceller," "The Rainy Day Romantic." India's most shared personality test since MBTI.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Feature 04</div>
+        <div class="card-title">Prediction Mode</div>
+        <div class="card-body">Swiggy doesn't wait for the craving. It calls it first. "You're 22 minutes away from ordering biryani." One killer feature that turns the campaign from clever to headline-worthy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ AI MECHANISM ░░ -->
+<section id="ai">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 03 — The AI Engine</div>
+    <h2 class="section-title fade-up">What makes it feel <em>magical — and still in your control</em></h2>
+    <p class="body-text fade-up">This isn't AI sprinkled on top of a campaign. The AI mechanism <em>is</em> the campaign. Swiggy reads when, what, and how you order, maps those patterns to emotional behavior, and turns them into sharp narratives users can unlock, save, or share on their own terms.</p>
+
+    <div class="ai-flow fade-up">
+      <div class="ai-step">
+        <div class="ai-step-num">Input</div>
+        <div class="ai-step-name">Pattern Reading</div>
+        <div class="ai-step-desc">Order time, weather, day of week, cart changes, cancellations, reorders, and session behavior</div>
+      </div>
+      <div class="ai-arrow">→</div>
+      <div class="ai-step">
+        <div class="ai-step-num">Model</div>
+        <div class="ai-step-name">Behavior Mapping</div>
+        <div class="ai-step-desc">Recurring rituals are translated into moods, triggers, routines, and likely next-order moments</div>
+      </div>
+      <div class="ai-arrow">→</div>
+      <div class="ai-step">
+        <div class="ai-step-num">Output</div>
+        <div class="ai-step-name">Knows Output</div>
+        <div class="ai-step-desc">A culturally tuned micro-narrative, prediction, or card in the user's language and dialect</div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card fade-up">
+        <div class="card-num">Signal Type 01</div>
+        <div class="card-title">Temporal patterns</div>
+        <div class="card-body">3 AM orders. Cancellations at 11 PM Sunday. Ordering for 2 on Valentine's Day, alone. The time of an order says more than the food itself.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Signal Type 02</div>
+        <div class="card-title">Behavioral fingerprints</div>
+        <div class="card-body">11 consecutive Sunday biryanis. Cancelled 4 times before ordering. Same dish every Friday. Patterns that the user never noticed — and now can't unsee.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Signal Type 03</div>
+        <div class="card-title">Contextual triggers</div>
+        <div class="card-body">Rainy day + chai = romantic. Post-midnight ice cream = breakup or board exam. Friday pizza = "you really thought this week would be different." Weather + time + food = emotion.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Signal Type 04</div>
+        <div class="card-title">Consent architecture</div>
+        <div class="card-body">The AI is designed to feel one insight too accurate — but never one choice too invasive. Users opt in, can hide categories, and control what gets turned into a shareable card.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ NOTIFICATIONS ░░ -->
+<section id="notifications">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 04 — Push Strategy</div>
+    <h2 class="section-title fade-up">5 notifications Swiggy would <em>actually</em> send you</h2>
+    <p class="body-text fade-up">Not "Your favourite restaurant is open!" — something that makes you stop scrolling and say: how does it know this. Every notification is framed as a private nudge first and a shareable moment second.</p>
+
+    <div class="notif-list fade-up">
+      <div class="notif">
+        <div class="notif-icon">🍗</div>
+        <div class="notif-content">
+          <div class="notif-header">
+            <span class="notif-app-name">Swiggy Knows.</span>
+            <span class="notif-time">Now · 1:47 AM</span>
+          </div>
+          <div class="notif-body">It's 1:47 AM on a Tuesday. You've opened the app 3 times and closed it. We know what this is. The butter chicken is ready when you stop pretending you're okay.</div>
+        </div>
+      </div>
+      <div class="notif">
+        <div class="notif-icon">🍚</div>
+        <div class="notif-content">
+          <div class="notif-header">
+            <span class="notif-app-name">Swiggy Knows.</span>
+            <span class="notif-time">Sunday · 1:15 PM</span>
+          </div>
+          <div class="notif-body">You've ordered biryani 11 Sundays in a row. We're not judging. We're actually a little proud. Your biryani is here for you like no one else apparently is.</div>
+        </div>
+      </div>
+      <div class="notif">
+        <div class="notif-icon">🍮</div>
+        <div class="notif-content">
+          <div class="notif-header">
+            <span class="notif-app-name">Swiggy Knows.</span>
+            <span class="notif-time">Yesterday · 9:32 PM</span>
+          </div>
+          <div class="notif-body">You cancelled 4 orders in a row last week before finally placing one. Our therapist (the algorithm) says: commitment phobia extends beyond relationships. Gulab jamun, no conditions.</div>
+        </div>
+      </div>
+      <div class="notif">
+        <div class="notif-icon">☕</div>
+        <div class="notif-content">
+          <div class="notif-header">
+            <span class="notif-app-name">Swiggy Knows.</span>
+            <span class="notif-time">Today · 6:12 PM</span>
+          </div>
+          <div class="notif-body">It's raining in Bangalore. You've ordered hot beverages every rainy evening for 3 months. We've prepared a playlist and the chai. You deserve a dramatic moment. Tap to begin.</div>
+        </div>
+      </div>
+      <div class="notif">
+        <div class="notif-icon">🫓</div>
+        <div class="notif-content">
+          <div class="notif-header">
+            <span class="notif-app-name">Swiggy Knows.</span>
+            <span class="notif-time">Monday · 11:20 PM</span>
+          </div>
+          <div class="notif-body">Prediction Mode: based on your last 8 Monday nights, you're 19 minutes away from ordering masala dosa and calling it self-care. We can be early. Extra sambar?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ SOCIAL ░░ -->
+<section id="social">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 05 — Social Media</div>
+    <h2 class="section-title fade-up">5 posts that will <em>break Indian Twitter</em> and Instagram</h2>
+    <p class="body-text fade-up">Posts engineered to be shared — whether in shock, recognition, or secondhand embarrassment on behalf of a friend. The system doesn't just allow sharing; it gives users formats built for comparison, confession, and tagging.</p>
+
+    <div class="social-grid">
+      <div class="social-card fade-up">
+        <div class="social-header">
+          <div class="avatar">SW</div>
+          <div>
+            <div class="social-name">Swiggy India</div>
+            <div class="social-handle">@swiggy_in · Instagram Reel</div>
+          </div>
+        </div>
+        <div class="social-body">POV: Swiggy's AI just told you "you order paneer butter masala specifically when you miss home, not when you're hungry." And it was right. 😶 Share your Swiggy Knows card. We're watching. (We're also sorry.) #SwiggYKnows</div>
+        <div class="social-stats">
+          <span class="social-stat"><strong>2.4L</strong> likes</span>
+          <span class="social-stat"><strong>89K</strong> shares</span>
+          <span class="social-stat">41K comments: <strong>"HOW"</strong></span>
+        </div>
+      </div>
+
+      <div class="social-card fade-up">
+        <div class="social-header">
+          <div class="avatar">SW</div>
+          <div>
+            <div class="social-name">Swiggy India</div>
+            <div class="social-handle">@swiggy_in · Twitter / X Thread</div>
+          </div>
+        </div>
+        <div class="social-body">We asked our AI what it knows about Indian users. It refused to sleep. [THREAD 🧵] 1/ 78% of midnight Maggi orders happen within 3 days of a "we need to talk" conversation. 2/ The average Indian orders biryani 11 minutes faster when it's raining. 3/ People who add extra garlic naan are, statistically, going through something. India, we see you. #SwiggYKnows</div>
+        <div class="social-stats">
+          <span class="social-stat"><strong>4.1L</strong> impressions</span>
+          <span class="social-stat"><strong>12K</strong> quote tweets</span>
+          <span class="social-stat"><strong>6K</strong> tag replies</span>
+        </div>
+      </div>
+
+      <div class="social-card fade-up">
+        <div class="social-header">
+          <div class="avatar ugc">PB</div>
+          <div>
+            <div class="social-name">@priya_sharma_blr (UGC)</div>
+            <div class="social-handle">Organic · Instagram Story</div>
+          </div>
+        </div>
+        <div class="social-body">MY SWIGGY KNOWS CARD SAID: "You are a 'coping mechanism' eater who confuses ordering for two people alone as portion control." THEN IT LET ME COMPARE WITH MY BEST FRIEND'S CARD??? SWIGGY IS IN MY WALLS 😭😭 @swiggy_in why are you like this [screenshot of card]</div>
+        <div class="social-stats">
+          <span class="social-stat">Organic UGC · <strong>Estimated 8M+ reach</strong></span>
+          <span class="social-stat">Viral at <strong>T+6 hrs</strong></span>
+        </div>
+      </div>
+
+      <div class="social-card fade-up">
+        <div class="social-header">
+          <div class="avatar">SW</div>
+          <div>
+            <div class="social-name">Swiggy India</div>
+            <div class="social-handle">@swiggy_in · Meme collab (Literally Reels)</div>
+          </div>
+        </div>
+        <div class="social-body">Reel format: therapist chair setup. AI voice reads real behavioral patterns. Person keeps interrupting: "that's not what it means." AI says: "Compare cards with your friend and say that again." [Creator collab: 12 pages · Est. 50M+ views]</div>
+        <div class="social-stats">
+          <span class="social-stat"><strong>12</strong> creator collabs</span>
+          <span class="social-stat">Est. <strong>50M+</strong> views</span>
+        </div>
+      </div>
+
+      <div class="social-card fade-up" style="grid-column: 1 / -1;">
+        <div class="social-header">
+          <div class="avatar">SW</div>
+          <div>
+            <div class="social-name">Swiggy India</div>
+            <div class="social-handle">@swiggy_in · LinkedIn (Unexpected crossover)</div>
+          </div>
+        </div>
+        <div class="social-body">We analyzed 100 million Indian food orders. Here's what the data actually says about us as a nation: We order most at 12:47 AM. We cancel most on Sundays at 11 PM. We reorder our comfort food within 6 hours of crying. India, we see you. We're proud of you. #SwiggYKnows — [Professional copy that goes viral for being unexpectedly human. National press pickup guaranteed.]</div>
+        <div class="social-stats">
+          <span class="social-stat"><strong>3M</strong> LinkedIn impressions</span>
+          <span class="social-stat">Unusual for food brand</span>
+          <span class="social-stat"><strong>National press</strong> pickup</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ OOH ░░ -->
+<section id="ooh">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 06 — Out-Of-Home</div>
+    <h2 class="section-title fade-up">3 lines that stop traffic in <em>Mumbai, Delhi, Bengaluru</em></h2>
+    <p class="body-text fade-up">Hyperlocal copy. Each city gets its own emotional truth. QR codes lead to the Knows Card experience. The billboard IS the product demo.</p>
+
+    <div class="ooh-list fade-up">
+      <div class="ooh-card">
+        <div class="ooh-location">📍 Andheri West Flyover — Mumbai</div>
+        <div class="ooh-copy">"Mumbai, you call it moving on. Your order history calls it post-heartbreak biryani. We just restocked."</div>
+        <div class="ooh-brand">Swiggy Knows. — Order now.</div>
+      </div>
+
+      <div class="ooh-card">
+        <div class="ooh-location">📍 Koramangala 5th Block — Bengaluru</div>
+        <div class="ooh-copy">"Bengaluru, you said you were fixing your sleep schedule. We saw the 3 AM Maggi, the rain, and the pitch deck."</div>
+        <div class="ooh-brand">Swiggy Knows.</div>
+      </div>
+
+      <div class="ooh-card">
+        <div class="ooh-location">📍 Connaught Place Metro Station — Delhi</div>
+        <div class="ooh-copy">"Delhi, you call it a cheat meal. We call it your third butter chicken this week after saying "bas aaj last time.""</div>
+        <div class="ooh-brand">Swiggy Knows. And Swiggy Delivers.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ EXECUTION ░░ -->
+<section id="execution">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 07 — Execution Plan</div>
+    <h2 class="section-title fade-up">90 days. <em>Three clear phases.</em></h2>
+
+    <div class="exec-list fade-up">
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 1</div>
+          <div class="exec-phase-name">Weeks 1–2</div>
+        </div>
+        <div class="exec-body"><strong>Private beta unlocks.</strong> "Swiggy Knows" tab appears in the app. It shows your food personality type, emotional order timeline, and a shareable Knows Card — a Spotify Wrapped-style snapshot generated in real time. Entry is explicitly opt-in with clear consent language: <em>See what Swiggy knows about you.</em></div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 1</div>
+          <div class="exec-phase-name">Weeks 3–4</div>
+        </div>
+        <div class="exec-body"><strong>Prediction Mode + personalized pushes.</strong> Users receive accurate behavioral commentary before, during, and after ordering. Category-level controls and opt-out remain visible at all times, making the experience feel confident rather than invasive.</div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 2</div>
+          <div class="exec-phase-name">Day 1</div>
+        </div>
+        <div class="exec-body"><strong>Aggregate data blitz.</strong> Swiggy posts national behavioral insights using aggregate, non-identifiable data only. Meme pages and nano-influencers (1K–50K) are seeded with their own voluntarily shared Knows Cards. Creates aspirational UGC within 48 hours.</div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 2</div>
+          <div class="exec-phase-name">Week 2</div>
+        </div>
+        <div class="exec-body"><strong>Reel template + Compare Cards.</strong> Users record themselves reacting to their Knows Card or comparing it with a friend's. Trend hashtag <strong style="color:#FC4404;">#SwiggYKnows</strong>. Bollywood crossover: one card references a famous filmy emotional moment tailored to the user's city and dialect. Tamil users get different humor than Punjabi users.</div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 3</div>
+          <div class="exec-phase-name">Week 3</div>
+        </div>
+        <div class="exec-body"><strong>12-city OOH launch.</strong> Hyperlocal copy per neighborhood. Bengaluru boards speak to startup burnout. Mumbai speaks to hustle loneliness. Jaipur and Lucknow lean into regional comfort food identity. QR on every board leads to the Knows Card experience. The billboard IS the product demo.</div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-phase">
+          <div class="exec-phase-tag">Phase 3</div>
+          <div class="exec-phase-name">Month 2</div>
+        </div>
+        <div class="exec-body"><strong>"Swiggy Knows you need this" shelf.</strong> Instamart home screen shows items matching your emotional signature. Not just food — cold medicine when your history shows a pattern, energy drinks before exam dates, comfort snacks on anniversaries of past breakups (opt-in only). Cross-product emotional intelligence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ VIRAL MECHANICS ░░ -->
+<section id="viral">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 08 — Viral Mechanics</div>
+    <h2 class="section-title fade-up">Why people will share it <em>without being asked</em></h2>
+
+    <div class="viral-grid fade-up">
+      <div class="viral-item">
+        <span class="viral-icon">🪞</span>
+        <div class="viral-title">The Mirror Effect</div>
+        <div class="viral-body">The Knows Card is accurate enough to feel personal and specific enough to feel impossible. "How does Swiggy know this about me?" is the most shareable sentence in social media.</div>
+      </div>
+      <div class="viral-item">
+        <span class="viral-icon">😅</span>
+        <div class="viral-title">Secondhand Embarrassment</div>
+        <div class="viral-body">People share their cards not to brag, but to confess. The cringe is the content. "I can't believe it said this" drives more shares than any incentive ever could.</div>
+      </div>
+      <div class="viral-item">
+        <span class="viral-icon">🧵</span>
+        <div class="viral-title">Compare & Correct</div>
+        <div class="viral-body">The card invites users to compare with friends, correct the AI, and post their own interpretation. "Swiggy thinks I'm lonely but this was for the whole office" becomes participation, not distrust.</div>
+      </div>
+      <div class="viral-item">
+        <span class="viral-icon">🏷️</span>
+        <div class="viral-title">Tag Your Person</div>
+        <div class="viral-body">Aggregate posts ("people who order ice cream at 2 AM are...") are designed to be sent directly to friends with zero context. Millions of DMs = millions of new users seeing Swiggy.</div>
+      </div>
+      <div class="viral-item">
+        <span class="viral-icon">🌏</span>
+        <div class="viral-title">Regional Pride</div>
+        <div class="viral-body">Cards in Hindi, Tamil, Telugu, Kannada, Bengali. A Kolkata card about mishti doi hits differently than a Hyderabad card about biryani. Regional specificity makes every card feel uniquely yours.</div>
+      </div>
+      <div class="viral-item">
+        <span class="viral-icon">📊</span>
+        <div class="viral-title">National Conversations</div>
+        <div class="viral-body">Swiggy's aggregate data posts ("India ordered 12L plates of biryani the night of the India-Pakistan match") create national discourse moments that news channels and podcasts amplify for free.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ RISK ░░ -->
+<section id="risk">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 09 — Risk & Controversy Layer</div>
+    <h2 class="section-title fade-up">Why the uncomfortable parts make this <em>unstoppable</em></h2>
+
+    <div class="risk-grid fade-up">
+      <div class="risk-main">
+        <p>The campaign will invite privacy debate. Tech journalists will ask: "Is Swiggy psychoanalyzing us?" That tension is real — so the response must be stronger than the provocation. Every Knows Card is opt-in, private by default, built on first-party signals plus anonymized aggregate learning, and removable with one tap. The goal is not surveillance theatre. The goal is to show that data can feel culturally intelligent <em>only when the user stays in control.</em></p>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Risk 01</div>
+        <div class="card-title">Privacy framing</div>
+        <div class="card-body">Position it as "Swiggy returning your data to you" — not surveillance, but self-knowledge. "It's your history. We just held the mirror." Legal review ensures full DPDP Act 2023 compliance before launch.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Risk 02</div>
+        <div class="card-title">Participation is by design</div>
+        <div class="card-body">Users can compare cards, add their own caption, and correct the AI publicly. The conversation stays playful and collaborative instead of feeling like the brand is forcing a joke at the user's expense.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Risk 03</div>
+        <div class="card-title">The "ick" factor</div>
+        <div class="card-body">Some users will find it creepy. The fix is not to dilute the idea; it's to anchor it in consent, humor, and clear boundaries. The campaign should feel intimate, not invasive.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Risk 04</div>
+        <div class="card-title">Competitive threat</div>
+        <div class="card-body">Zomato cannot copy this. They lack the same depth of behavioral history. If they try, they're validating Swiggy's idea — and playing catch-up. This is a moat, not a feature.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ IMPACT ░░ -->
+<section id="impact">
+  <div class="section-inner">
+    <div class="section-label fade-up">Step 10 — Business Impact</div>
+    <h2 class="section-title fade-up">Why this moves <em>the actual numbers</em></h2>
+
+    <div class="metrics-grid fade-up">
+      <div class="metric-card">
+        <div class="metric-num">+23%</div>
+        <div class="metric-label">Projected order frequency lift via behavioral anchoring — users return to confirm, challenge, or act on their AI portrait</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">+41%</div>
+        <div class="metric-label">Projected app opens per week — curiosity-driven re-engagement even without hunger. The app becomes a mirror, not just a menu</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">+18%</div>
+        <div class="metric-label">Projected Instamart attach rate via emotional cross-sell. "Swiggy Knows you need this" shelf drives new product discovery</div>
+      </div>
+    </div>
+
+    <div class="card-grid" style="margin-top:2rem;">
+      <div class="card fade-up">
+        <div class="card-num">Impact 01</div>
+        <div class="card-title">New acquisition with compounding efficiency</div>
+        <div class="card-body">The viral UGC loop drives new user acquisition with minimal paid amplification. Knows Cards become Swiggy's own growth engine — users recruit users by sharing, comparing, and tagging friends.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Impact 02</div>
+        <div class="card-title">Emotional loyalty that can't be copied</div>
+        <div class="card-body">The feature creates a proprietary emotional bond that requires the same depth of order history Swiggy already has. Zomato cannot replicate this without years of equivalent data.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-num">Impact 03</div>
+        <div class="card-title">Brand repositioning at category level</div>
+        <div class="card-body">Swiggy stops being a utility and becomes a relationship. While competitors recommend food, Swiggy understands behavior. That shift turns the brand from transactional to culturally indispensable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FINAL ARGUMENT ░░ -->
+<section class="final-section">
+  <div class="section-inner">
+    <div class="section-label fade-up">The Pitch</div>
+    <h2 class="section-title fade-up">Why Swiggy leadership will approve this</h2>
+    <p class="body-text fade-up">Swiggy is not losing to Zomato on delivery speed or restaurant selection. It is losing on cultural resonance. Zomato owns the meme space. This campaign takes it back — not by being funnier, but by being more intimate. It transforms Swiggy from a utility into a relationship.</p>
+    <br>
+    <p class="body-text fade-up">The AI mechanism is not a feature; it's a brand reframe. While competitors recommend food, Swiggy understands behavior. That makes Swiggy the only app in India that can turn first-party data into cultural intimacy — using infrastructure it already owns.</p>
+
+    <div class="final-box fade-up">
+      <p>This is Swiggy's version of Spotify Wrapped — but make it Indian, make it emotional, make it slightly uncomfortable, and release it every week instead of once a year. The format is proven globally. The execution is Swiggy's own. And because it is built on consent, cultural sharpness, and prediction-led utility, India won't just talk about it — people will use it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Swiggy Knows.</div>
+    <div class="footer-note">Campaign Concept · AI-Native · Cannes Lions Ready · India 2025</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
